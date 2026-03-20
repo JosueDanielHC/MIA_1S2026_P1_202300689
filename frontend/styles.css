@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #1a1b26;
+  --surface: #24283b;
+  --text: #c0caf5;
+  --accent: #7aa2f7;
+  --success: #9ece6a;
+  --border: #3b4261;
+}
+
+body {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-secondary {
+  background: var(--border);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: #4a5070;
+}
+
+#inputCommands {
+  flex: 1;
+  min-height: 200px;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#inputCommands::placeholder {
+  color: #565f89;
+}
+
+#outputCommands {
+  flex: 1;
+  min-height: 200px;
+  margin: 0;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  background: var(--bg);
+  color: var(--success);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

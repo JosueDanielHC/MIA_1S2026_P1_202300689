@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExtreamFS - Sistema de archivos EXT2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ExtreamFS</h1>
+    <p class="subtitle">Simulación de sistema de archivos EXT2</p>
+  </header>
+
+  <main>
+    <section class="panel input-panel">
+      <h2>Entrada de comandos</h2>
+      <div class="toolbar">
+        <label class="btn btn-secondary">
+          Cargar script (.smia)
+          <input type="file" id="scriptFile" accept=".smia" hidden>
+        </label>
+        <button type="button" class="btn btn-primary" id="btnExecute">Ejecutar</button>
+      </div>
+      <textarea id="inputCommands" placeholder="Escriba comandos aquí o cargue un archivo .smia..."></textarea>
+    </section>
+
+    <section class="panel output-panel">
+      <h2>Salida</h2>
+      <pre id="outputCommands"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
